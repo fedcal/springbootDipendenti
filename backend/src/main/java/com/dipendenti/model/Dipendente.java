@@ -8,12 +8,24 @@ public class Dipendente {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
+
     @Column(name="nome")
     private String nome;
+
     @Column(name="cognome")
     private String cognome;
+
     @Column(name="email")
     private String email;
+
+
+    public Dipendente(){}
+    public Dipendente(long id, String nome, String cognome, String email){
+        this.id=id;
+        this.nome=nome;
+        this.cognome=cognome;
+        this.email=email;
+    }
 
     public long getId() {
         return id;
