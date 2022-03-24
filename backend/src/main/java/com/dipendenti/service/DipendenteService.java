@@ -6,4 +6,5 @@ import java.util.List;
 
 public interface DipendenteService {
     List<Dipendente> getAllDipendenti();
+    void addDipendenti(Dipendente dipendente);
 }

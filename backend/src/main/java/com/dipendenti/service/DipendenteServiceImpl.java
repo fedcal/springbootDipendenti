@@ -15,4 +15,9 @@ public class DipendenteServiceImpl implements DipendenteService{
     public List<Dipendente> getAllDipendenti() {
         return dipendenteRepository.findAll();
     }
+
+    @Override
+    public void addDipendenti(Dipendente dipendente) {
+        this.dipendenteRepository.save(dipendente);
+    }
 }
