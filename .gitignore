@@ -1,0 +1,7 @@
+backend/node_modules
+backend/target
+backend/.mvn/wrapper/maven-wrapper.jar
+backend/src/main/**/target/
+backend/src/test
+backend/src/main/resources/application.properties
+backend/.idea
