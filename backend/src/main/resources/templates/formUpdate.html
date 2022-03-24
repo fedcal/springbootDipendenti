@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>formUpdate</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+
+<div class="container my-2">
+    <h1>Aggiorna impiegato</h1>
+    <!-- oggetto su cui fare il bind-->
+    <form action="#" th:action="@{/salvaDipendente}"th:object="${dipendente}" method="POST">
+        <input type="hidden" th:field="*{id}"/>
+        <input type="text" th:field="*{nome}" placeholder="Nome impiegato" class="form-control mb-4 col-4">
+        <input type="text" th:field="*{cognome}" placeholder="Cognome impiegato" class="form-control mb-4 col-4">
+        <input type="text" th:field="*{email}" placeholder="Email impiegato" class="form-control mb-4 col-4">
+        <button type="submit" class="btn btn-info col-2">Aggiungi</button>
+    </form>
+    <a th:href="@{/}"> Torna alla lista dei dipendenti</a>
+
+</body>
+</html>

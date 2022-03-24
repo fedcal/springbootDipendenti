@@ -8,12 +8,14 @@
     <body>
         <div class="container my-2">
             <h1>Aggiungi impiegato</h1>
+            <!-- oggetto su cui fare il bind-->
             <form action="#" th:action="@{/salvaDipendente}"th:object="${dipendente}" method="POST">
                 <input type="text" th:field="*{nome}" placeholder="Nome impiegato" class="form-control mb-4 col-4">
                 <input type="text" th:field="*{cognome}" placeholder="Cognome impiegato" class="form-control mb-4 col-4">
                 <input type="text" th:field="*{email}" placeholder="Email impiegato" class="form-control mb-4 col-4">
                 <button type="submit" class="btn btn-info col-2">Aggiungi</button>
             </form>
+            <a th:href="@{/}"> Torna alla lista dei dipendenti</a>
         </div>
     </body>
 </html>

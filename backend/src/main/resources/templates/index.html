@@ -15,6 +15,7 @@
                     <th>Nome</th>
                     <th>Cognome</th>
                     <th>Email</th>
+                    <th>Azioni</th>
                 </tr>
             </thead>
             <tbody>
@@ -22,6 +23,7 @@
                     <td th:text="${dipendente.nome}"></td>
                     <td th:text="${dipendente.cognome}"></td>
                     <td th:text="${dipendente.email}"></td>
+                    <td><a th:href="@{/formUpdate/{id}(id=${dipendente.id})}" class="btn btn-primary">Aggiorna</a><a th:href="@{/deleteDipendente/{id}(id=${dipendente.id})}" class="btn btn-danger">Elimina</a></td>
                 </tr>
             </tbody>
         </table>
